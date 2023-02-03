@@ -7,3 +7,7 @@ headers:
           named: "airlock-cookie"
 include_subgraph_errors:
   all: true # Propagate errors from all subgraphs
+cors:
+  origins:
+    - http://localhost:3000 # Allows any locally-running client to run against your Router
+
