@@ -1,2 +1,9 @@
+headers:
+  all:
+    request:
+      - propagate:
+          named: "Authorization"
+      - propagate:
+          named: "airlock-cookie"
 include_subgraph_errors:
   all: true # Propagate errors from all subgraphs
