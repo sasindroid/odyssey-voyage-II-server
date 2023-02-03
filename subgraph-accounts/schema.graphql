@@ -2,13 +2,6 @@ extend schema
   @link(url: "https://specs.apollo.dev/federation/v2.0",
         import: ["@key"])
 
-type Query {
-    ### User accounts
-    user(id: ID!): User
-    "Currently logged-in user"
-    me: User!
-}
-
 "Represents an Airlock user's common properties"
 interface User {
     id: ID!

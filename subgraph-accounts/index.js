@@ -1,6 +1,7 @@
 const { ApolloServer } = require('@apollo/server');
 const { startStandaloneServer } = require('@apollo/server/standalone');
 const { buildSubgraphSchema } = require('@apollo/subgraph');
+const AccountsAPI = require("./datasources/accounts");
 
 const { readFileSync } = require('fs');
 const axios = require('axios');
@@ -40,7 +41,7 @@ async function startApolloServer() {
         return {
           ...userInfo,
           dataSources: {
-            // TODO: add data sources here
+            accountsAPI: new AccountsAPI(),
           },
         };
       },
